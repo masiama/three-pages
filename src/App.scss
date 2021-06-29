@@ -1,0 +1,18 @@
+@import "./scss/vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background: #dad2d8;
+  color: $text-color;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+}

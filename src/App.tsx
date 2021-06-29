@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
+import './App.scss'
 import DataPage from './pages/data-page/DataPage';
 import HomePage from './pages/home-page/HomePage';
 import StatsPage from './pages/stats-page/StatsPage';
