@@ -1,0 +1,23 @@
+.stats {
+  height: 100vh;
+
+  &__data {
+    display: grid;
+    gap: 1rem;
+    margin: auto;
+    padding-top: 1rem;
+    max-width: 30rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+  }
+
+  .data {
+    opacity: 0.3;
+  }
+}
