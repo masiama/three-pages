@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './Comment.scss';
 
 export interface IComment {

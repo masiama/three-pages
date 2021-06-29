@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './DataPage.scss';
 import Comment, { IComment } from '../../components/comment/Comment';
-
 
 function DataPage() {
   const [comments, setComments] = useState<Array<IComment>>();
@@ -10,14 +9,20 @@ function DataPage() {
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/comments')
       .then(res => res.json())
-      .then(setComments)
+      .then(setComments);
   }, []);
 
   return (
     <section className="data">
-      {!comments ? <div className="data__loading">Loading...</div> : <div className="data__content">
-        {comments.map(comment => <Comment key={comment.id} comment={comment} />)}
-      </div>}
+      {!comments ? (
+        <div className="data__loading">Loading...</div>
+      ) : (
+        <div className="data__content">
+          {comments.map(comment => (
+            <Comment key={comment.id} comment={comment} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

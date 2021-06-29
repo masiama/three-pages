@@ -1,6 +1,11 @@
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import React, {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from 'react-router-dom';
 
-import './App.scss'
+import './App.scss';
 import DataPage from './pages/data-page/DataPage';
 import HomePage from './pages/home-page/HomePage';
 import StatsPage from './pages/stats-page/StatsPage';
@@ -12,7 +17,7 @@ function App() {
         <Route path="/" exact component={HomePage} />
         <Route path="/data" exact component={DataPage} />
         <Route path="/stats" exact component={StatsPage} />
-        <Route path="*" render={() => <Redirect to="/"/>} />
+        <Route path="*" render={() => <Redirect to="/" />} />
       </Switch>
     </Router>
   );
