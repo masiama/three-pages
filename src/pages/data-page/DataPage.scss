@@ -1,0 +1,21 @@
+$padding: 1rem;
+
+.data {
+  padding: $padding;
+
+  &__loading {
+    height: calc(100vh - calc(2 * #{$padding}));
+    width: calc(100vw - calc(2 * #{$padding}));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    max-width: 30rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
